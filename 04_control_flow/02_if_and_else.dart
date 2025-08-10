@@ -4,6 +4,8 @@
 // untuk mengecek suatu kondisi pada dart kita menggunakan keyword 'if':
 
 
+// ignore_for_file: unnecessary_null_comparison
+
 // 'if' digunakan untuk menentukan suatu kondisi:
 // - jika kondisi (ekspresi) bernilai true, maka blok kode didalamnya dijalankan
 // - jika kondisi bernilai false, maka blok kode didalamnya dilewatkan
@@ -49,14 +51,30 @@ void main() {
 
   // fitur menarik lain dari Dart adalah conditional expressions.
   // atau biasanya dikenal dengan ternary operator (if else dalam satu baris)
+
   // condition ? true expression : false expression
   var shopStatus = now > openHours ? "Hello, we're open" : "Sorry, we've closed";
+  // jika ditranslate ke if else biasa:
+  // if(now > openHours){
+  //   shopStatus = "Hello, we're open";
+  // }else{
+  //   shopStatus = "Sorry, we've closed";
+  // }
+
+  var name = 'alice'; // => semisal namanya alice  
 
   // expression1 ?? expression2
   var buyer = name ?? 'user';
   // pada kode di atas jika variabel name tidak bernilai null, 
   // maka buyer akan menyimpan nilai dari name. 
   // namun jika bernilai null, buyer akan berisi ‘user’.
+  // jika ditranslate :
+  if(name != null){
+    buyer = name;
+  }else{
+    buyer = 'user';
+  }
+
 }
 
 

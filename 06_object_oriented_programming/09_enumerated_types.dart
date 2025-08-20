@@ -51,6 +51,11 @@ void main() {
 /// dart versi 2.17 rilis dengan fitur baru lagi
 /// Enums mempunyai fitur layaknya akelas yang memiliki  attribute dan behaviour.
 /// dengan begitu kita dapat memberikan verabel ataupun constructor di dalam enums
+
+// ini nanti ya.... buat toString
+  var weatherForecastt = Weatherr.cloudy;
+  print(weatherForecastt);
+
 }
 
 
@@ -64,16 +69,46 @@ enum Weather {
 
   const Weather(this.rainAmount); // => ini yang nempelin rainAmount ke semua weather... klo 2? 
 
-  // berarti : 
-  
-  // sunny(15, "hot"),  // ← 2 parameter
-  // const Weather(this.rainAmount, this.temperature);  // ← 2 parameter, cocok!
+// Dengan kehadiran variabel di dalam Enums, kita dapat akses attribute rainAmount dengan cara seperti berikut:
+// print(Weather.rain.rainAmount);
 }
 
-// Dengan kehadiran variabel di dalam Enums, kita dapat akses attribute rainAmount dengan cara seperti berikut:
+// berarti klo 2: 
+enum Weathere{
+  sunnyy(15, "hot");  // ← 2 parameter
 
-// print(Weather.rain.rainAmount);
+  final int rainAmount;
+  final String temperature;
+  const Weathere(this.rainAmount, this.temperature);  // ← 2 parameter, cocok!
 
+  // cara print : 
+  // print('${Weather.sunny.rainAmount} and ${Weathere.sunnyy.temperature}');
+  // output : 15 and hot
+}
+
+// selain itu, kita dapat melakukan override method toString(). Dengan begitu, kita dapat mengonversi teks sesuai dengan apa yang diinginkan.
+// enum Weather {
+//   // …
 //
+//   @override
+//   String toString() => "Today's weather forecast is $name with a $rainAmount% chance of rain";
+// }
 
 
+// Untuk menjalankannya, Anda dapat jalankan perintah berikut.
+
+
+enum Weatherr {
+  sunny(15),
+  cloudy(34),
+  rain(69),
+  storm(83);
+
+  final int rainAmount;
+
+  const Weatherr(this.rainAmount);
+
+  @override
+  String toString() =>
+      "Today's weather forecast is $name with a $rainAmount% chance of rain";
+}

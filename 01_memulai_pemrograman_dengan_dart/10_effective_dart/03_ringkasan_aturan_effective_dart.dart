@@ -109,7 +109,7 @@ If (store.close)
 List filter(bool predicate(item)) { }
 
 // Sejak Dart versi 2, terdapat notasi umum untuk tipe fungsi sehingga bisa digunakan untuk parameter berupa fungsi.
-List filter(Function predicate) { }  // function type syntax
+'List filter(Function predicate) { }'  // function type syntax
 
 // Sebenarnya beberapa aturan di atas hanyalah sebagian dari seluruh aturan yang ada dalam Effective Dart. Selengkapnya Anda dapat mempelajari panduan dan aturan Effective Dart ini pada tautan berikut:
 /// https://dart.dev/effective-dart/style

@@ -20,12 +20,12 @@ class Flyable{
 // kita dapat membiarkan body dari class tetap kosong, fungsi yang masih kosong akan dilakukan oleh class. 
 // selanjutnya buat kelas baru yang mengimplementasi interface Flyable.
 
-class BirdExample extends Animal implements Flyable {
-  String featherColor;
- 
-  BirdExample(String name, int age, double weight, this.featherColor) : super(name, age, weight);
- 
-}
+// class BirdExample extends Animal implements Flyable {
+//   String featherColor;
+//
+//   BirdExample(String name, int age, double weight, this.featherColor) : super(name, age, weight);
+//
+// }
 
 // kalian akan mendapati eror yang memberikan pesan “Missing concrete implementation of Flyable.fly”. 
 // ini artinya kita harus mengimplementasi fungsi fly yang terdapat pada interface Flyable.
@@ -71,7 +71,7 @@ class Bird extends Animal implements Flyable {
 
 // main.dart
 void main() {
-  var dicodingBird = Bird('Birdy', 2, 0.8, 'Gray');
+  var dicodingBird = Bird('Bird', 2, 0.8, 'Gray');
   
   dicodingBird.fly();   // dari Flyable interface
   dicodingBird.eat();   // dari Animal class
